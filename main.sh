@@ -36,3 +36,4 @@ do
 	# echo "$i"
 
 done
+echo "$z commits are placed between $x and $y"
