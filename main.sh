@@ -26,7 +26,7 @@ do
 
 		git add .
 
-		msg='commit '${DATE}
+		msg='commits'${DATE}
 
 		git commit -m $msg --date="$(date -R -d ${DATE})"
 		
