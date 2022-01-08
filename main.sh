@@ -11,12 +11,10 @@ echo "Enter End date [yyyymmdd]"
 read y
 
 declare -i z
-declare -i y
 echo "How many commits"
 read z
 
 DATE=$x
-
 
 for (( i=0; i<$z; i++ ))
 
@@ -35,5 +33,6 @@ do
 		DATE=$(date +%Y%m%d -d "$DATE + 1 day")
 
 	done
+	# echo "$i"
 
 done
