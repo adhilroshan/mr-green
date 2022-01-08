@@ -14,11 +14,11 @@ declare -i z
 echo "How many commits"
 read z
 
-DATE=$x
 
 for (( i=0; i<$z; i++ ))
 
 do
+	DATE=$x
 	while [ $DATE -le $y ]
 
 	do
