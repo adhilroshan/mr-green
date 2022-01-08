@@ -19,7 +19,8 @@ DATE=$x
 
 i=0
 
-while[$i -le $z]
+while [ $i -le $z ]
+
 do
 	while [ $DATE -le $y ]
 
@@ -35,5 +36,6 @@ do
 		DATE=$(date +%Y%m%d -d "$DATE + 1 day")
 
 	done
+	
 	i=`expr $i + 1`
 done
