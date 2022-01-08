@@ -17,15 +17,14 @@ read z
 
 DATE=$x
 
-i=0
 
-while [ $i -le $z ]
+for (( i=0; i<$z; i++ ))
 
 do
 	while [ $DATE -le $y ]
 
 	do
-		echo 'a' >> mr-green
+		echo 'SMAASHHH!!' >> mr-green
 
 		git add .
 
@@ -36,6 +35,5 @@ do
 		DATE=$(date +%Y%m%d -d "$DATE + 1 day")
 
 	done
-	
-	i=`expr $i + 1`
+
 done
