@@ -10,19 +10,27 @@ declare -i y
 echo "Enter End date [yyyymmdd]"
 read y
 
+declare -i z
+declare -i y
+echo "How many commits"
+read z
+
 DATE=$x
 
-while [ $DATE -le $y ]
-
+for ((i=10;i<=$z;i++))
 do
-	echo 'a' >> junk
+	while [ $DATE -le $y ]
 
-	git add .
+	do
+		echo 'a' >> junk
 
-	msg='commit'${DATE}
+		git add .
 
-	git commit -m $msg --date="$(date -R -d ${DATE})"
-   	
-   	DATE=$(date +%Y%m%d -d "$DATE + 1 day")
+		msg='commit'${DATE}
 
+		git commit -m $msg --date="$(date -R -d ${DATE})"
+		
+		DATE=$(date +%Y%m%d -d "$DATE + 1 day")
+
+	done
 done
