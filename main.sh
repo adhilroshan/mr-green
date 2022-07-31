@@ -1,6 +1,6 @@
 git init
 
-touch junk
+touch mr-green
 
 declare -i x
 echo "Enter Beginning date [yyyymmdd]"
@@ -17,12 +17,14 @@ read z
 
 DATE=$x
 
-for ((i=10;i<=$z;i++))
+i=0
+
+while[$i -le $z]
 do
 	while [ $DATE -le $y ]
 
 	do
-		echo 'a' >> junk
+		echo 'a' >> mr-green
 
 		git add .
 
@@ -33,4 +35,5 @@ do
 		DATE=$(date +%Y%m%d -d "$DATE + 1 day")
 
 	done
+	i=`expr $i + 1`
 done
